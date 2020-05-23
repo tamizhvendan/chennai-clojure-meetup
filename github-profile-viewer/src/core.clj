@@ -37,7 +37,10 @@
 (defn start-server []
   (jetty/run-jetty (ring/ring-handler (router))
                    {:join? false
-                    :port  8080}))
+                    :port  4567}))
+
+(defn -main []
+  (start-server))
 
 (comment
   (get-developer 3)
